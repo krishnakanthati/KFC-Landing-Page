@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>KFC</title>
+  </head>
+  <body>
+    <section class="sec">
+      <header>
+        <a href="#"><img src="logo.png" class="logo" alt="""></a>
+        <h1>Kentucky Fried Chicken</h1>
+        <ul>
+          <li><a href="#">Promotions</a></li>
+          <li><a href="#">Chicken</a></li>
+          <li><a href="#">Sandwiches</a></li>
+          <li><a href="#">Meals</a></li>
+          <li><a href="#">Burger</a></li>
+          <li><a href="#">Desserts</a></li>
+          <li><a href="#">Drinks</a></li>
+        </ul>
+      </header>
+      <div class="content">
+        <div class="textBox">
+          <h2>Finger Lickin' Good.</h2>
+          <br />
+          <h3>Buy a bucket of chicken and have a barrel of fun!</h3>
+          <br />
+          <p>Hand breaded, freshly prepared and Finger Lickin’ Good®!</p>
+          <p>Our chicken isn't made the fast way or the easy way.</p>
+          <p>It's made the hard way.</p>
+          <br />
+          <a href="#">View All Products</a>
+        </div>
+        <div class="imgBox">
+          <img src="burger.png" alt="" class="kfc" height="280px;" />
+          <button>BUY</button>
+        </div>
+      </div>
+      <ul class="thumb">
+        <li>
+          <img
+            src="kfc1.png"
+            alt=""
+            onclick="imgSlider('kfc1.png');changeBgColor('#f75990');"
+          />
+        </li>
+        <li>
+          <img
+            src="kfc2.png"
+            alt=""
+            onclick="imgSlider('kfc2.png');changeBgColor('#ff3921');"
+          />
+        </li>
+        <li>
+          <img
+            src="kfc3.png"
+            alt=""
+            onclick="imgSlider('kfc3.png');changeBgColor('#8458B3');"
+          />
+        </li>
+        <li>
+          <img
+            src="kfc4.png"
+            alt=""
+            onclick="imgSlider('kfc4.png');changeBgColor('#0049B7');"
+          />
+        </li>
+        <li>
+          <img
+            src="kfc5.png"
+            alt=""
+            onclick="imgSlider('kfc5.png');changeBgColor('#e60c2c');"
+          />
+        </li>
+      </ul>
+      <ul class="connect">
+        <li>
+          <a href="https://twitter.com/kfc"><img src="twitter.png" alt="" /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/kfc"
+            ><img src="instagram.png" alt=""
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/KFC"
+            ><img src="facebook.png" alt=""
+          /></a>
+        </li>
+      </ul>
+    </section>
+    <div class="cursor"></div>
+    <script type="text/javascript">
+      function imgSlider(anything) {
+        document.querySelector(".kfc").src = anything;
+      }
+      function changeBgColor(color) {
+        const sec = document.querySelector(".sec");
+        sec.style.background = color;
+      }
+      const cursor = document.querySelector(".cursor");
+      document.addEventListener("mousemove", (e) => {
+        cursor.style.left = e.pageX + "px";
+        cursor.style.top = e.pageY + "px";
+      });
+    </script>
+  </body>
+</html>
